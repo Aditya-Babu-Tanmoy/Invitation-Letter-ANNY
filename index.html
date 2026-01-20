@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="bn" class="h-full">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>শুভ বিবাহ নিমন্ত্রণপত্র</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="/_sdk/element_sdk.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali:wght@400;600;700;900&family=Cinzel+Decorative:wght@400;700;900&display=swap" rel="stylesheet">
+  <style>
+    body {
+      box-sizing: border-box;
+    }
+    
+    .bengali-font {
+      font-family: 'Noto Serif Bengali', serif;
+    }
+    
+    .decorative-font {
+      font-family: 'Cinzel Decorative', 'Noto Serif Bengali', serif;
+    }
+    
+    @keyframes flicker {
+      0%, 100% { opacity: 1; text-shadow: 0 0 20px #ff9800, 0 0 30px #ff5722; }
+      50% { opacity: 0.85; text-shadow: 0 0 15px #ff9800, 0 0 25px #ff5722; }
+    }
+    
+    @keyframes gentleFloat {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-10px) rotate(5deg); }
+    }
+    
+    @keyframes petalDrift {
+      0% {
+        transform: translateY(-20px) translateX(0) rotate(0deg);
+        opacity: 0;
+      }
+      10% { opacity: 1; }
+      90% { opacity: 0.7; }
+      100% {
+        transform: translateY(120px) translateX(30px) rotate(180deg);
+        opacity: 0;
+      }
+    }
+    
+    @keyframes shimmer {
+      0% { background-position: -200% center; }
+      100% { background-position: 200% center; }
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+    
+    .diya-flame {
+      animation: flicker 2s ease-in-out infinite;
+    }
+    
+    .float-gentle {
+      animation: gentleFloat 4s ease-in-out infinite;
+    }
+    
+    .petal-fall {
+      position: absolute;
+      animation: petalDrift 10s linear infinite;
+      pointer-events: none;
+      font-size: 1.5rem;
+    }
+    
+    .golden-gradient {
+      background: linear-gradient(135deg, #bf953f 0%, #fcf6ba 30%, #b38728 60%, #fbf5b7 100%);
+    }
+    
+    .maroon-gradient {
+      background: linear-gradient(135deg, #5c0e0e 0%, #8b0000 50%, #5c0e0e 100%);
+    }
+    
+    .temple-arch {
+      background: linear-gradient(180deg, #8b0000 0%, #a52a2a 100%);
+      border-radius: 50% 50% 0 0;
+      position: relative;
+      box-shadow: inset 0 -10px 30px rgba(0,0,0,0.3);
+    }
+    
+    .mandala-bg {
+      background-image: 
+        radial-gradient(circle at 50% 50%, transparent 30%, rgba(191, 149, 63, 0.05) 30%, rgba(191, 149, 63, 0.05) 31%, transparent 31%),
+        radial-gradient(circle at 50% 50%, transparent 40%, rgba(191, 149, 63, 0.08) 40%, rgba(191, 149, 63, 0.08) 41%, transparent 41%),
+        radial-gradient(circle at 50% 50%, transparent 50%, rgba(191, 149, 63, 0.05) 50%, rgba(191, 149, 63, 0.05) 51%, transparent 51%);
+      background-size: 100px 100px;
+    }
+    
+    .rangoli-pattern {
+      background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23bf953f' fill-opacity='0.08'%3E%3Cpath d='M30 30l10-10-10-10-10 10 10 10zm0 0l10 10-10 10-10-10 10-10zM10 30l10-10-10-10-10 10 10 10zm0 0l10 10-10 10-10-10 10-10zM50 30l10-10-10-10-10 10 10 10zm0 0l10 10-10 10-10-10 10-10z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+    
+    .shine-effect {
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+      background-size: 200% 100%;
+      animation: shimmer 3s infinite;
+    }
+    
+    .card-entrance {
+      animation: fadeIn 1s ease-out forwards;
+    }
+    
+    .om-symbol {
+      filter: drop-shadow(0 0 15px #ffab40);
+    }
+    
+    .decorative-border {
+      border: 3px solid;
+      border-image: linear-gradient(135deg, #bf953f, #fcf6ba, #b38728, #fbf5b7) 1;
+    }
+    
+    /* NEW: Image styling class */
+    .profile-image-container {
+      width: 160px;
+      height: 160px;
+      margin: 0 auto 1rem auto;
+      border-radius: 50%;
+      padding: 4px;
+      background: linear-gradient(135deg, #bf953f, #fcf6ba, #b38728);
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    }
+    
+    .profile-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid white;
+    }
+  </style>
+  <style>@view-transition { navigation: auto; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+ </head>
+ <body class="h-full bengali-font">
+  <div id="app-wrapper" class="w-full h-full overflow-auto rangoli-pattern" style="background: linear-gradient(135deg, #2d0a0a 0%, #4a0e0e 50%, #2d0a0a 100%);"><div class="petal-fall" style="left: 5%; animation-delay: 0s;">
+    🌺
+   </div>
+   <div class="petal-fall" style="left: 15%; animation-delay: 3s;">
+    🌸
+   </div>
+   <div class="petal-fall" style="left: 30%; animation-delay: 1.5s;">
+    🏵️
+   </div>
+   <div class="petal-fall" style="left: 50%; animation-delay: 4s;">
+    🌺
+   </div>
+   <div class="petal-fall" style="left: 70%; animation-delay: 2s;">
+    🌸
+   </div>
+   <div class="petal-fall" style="left: 85%; animation-delay: 5s;">
+    🏵️
+   </div>
+   <div class="petal-fall" style="left: 95%; animation-delay: 2.5s;">
+    🌺
+   </div>
+   <main class="max-w-4xl mx-auto p-4 py-8"><div class="card-entrance mb-6">
+     <div class="temple-arch w-full h-24 md:h-32 mb-[-20px] relative">
+      <div class="absolute top-2 left-1/2 transform -translate-x-1/2 text-4xl md:text-5xl om-symbol diya-flame">
+       
+        <div class="w-20 h-20 mx-auto">
+             <img src = "Assets/S1.png" class="w-full h-full object-contain drop-shadow-lg">
+        </div>
+       
+      </div><div class="absolute bottom-0 left-0 right-0 h-4 golden-gradient"></div>
+     </div>
+    </div><div class="golden-gradient p-1 rounded-lg shadow-2xl card-entrance" style="animation-delay: 0.2s;">
+     <div class="mandala-bg rounded-lg p-6 md:p-10" style="background-color: #fef9e7;"><header class="text-center mb-8">
+       <div class="flex justify-center items-center gap-4 mb-6"><span class="text-3xl diya-flame">🪔</span> <span class="text-3xl diya-flame" style="animation-delay: 0.5s;">🪔</span> <span class="text-5xl md:text-6xl diya-flame float-gentle" style="color: #ff0000; animation-delay: 1s;">ॐ</span> <span class="text-3xl diya-flame" style="animation-delay: 1.5s;">🪔</span> <span class="text-3xl diya-flame" style="animation-delay: 2s;">🪔</span>
+       </div>
+       <h1 class="text-2xl md:text-3xl font-bold mb-2" style="color: #8b0000;">॥ শ্রী শ্রী প্রজাপতয়ে নমঃ ॥</h1>
+       <div class="inline-block mb-4">
+        <p class="text-6xl md:text-7xl mb-2" style = "color: #ff0000;">𖤓𖤓𖤓</p>
+       </div>
+       <h2 class="text-5xl md:text-6xl font-black decorative-font mb-4 shine-effect" style="color: #8b0000;">শুভ বিবাহ</h2>
+       <div class="flex items-center justify-center gap-3 mb-4"><span class="text-2xl" style="color: #bf953f;">✦</span> <span class="text-3xl" style="color: #bf953f;">❖</span> <span class="text-2xl" style="color: #bf953f;">✦</span>
+       </div><div class="maroon-gradient text-white py-4 px-6 rounded-lg mb-4 max-w-2xl mx-auto">
+        <p class="text-lg md:text-xl leading-relaxed font-semibold italic">"ওঁ মম ব্রতে তে হৃদয়ং দধামি মম চিত্তমনু চিন্তন্তে।<br> মম বাচমেকসনা জুয়ম্ব প্রজাপতিস্তা নিযুনক্তু মহ্যম্।।"</p>
+        <p class="text-sm mt-2 opacity-90">তোমার হৃদয় আমার ব্রতের (লক্ষ্যের) অনুগামী হোক, তোমার চিত্ত আমার চিত্তের অনুগামী হোক। তুমি আমার বাক্যের প্রতি একাগ্র হও। প্রজাপতি (সৃষ্টিকর্তা) তোমাকে আমার সাথে যুক্ত করুন।  ----- অথর্ববেদ ৭.৩৬.১</p>
+       </div>
+      </header><div class="flex items-center justify-center gap-4 my-6">
+       <div class="h-0.5 w-20 golden-gradient"></div><span class="text-4xl float-gentle">🪷</span>
+       <div class="h-0.5 w-20 golden-gradient"></div>
+      </div><section class="text-center mb-8">
+       <div class="flex items-center justify-center gap-3 mb-4"><span class="text-2xl">🌺</span>
+        <p class="text-lg font-semibold" style="color: #8b4513;">শুভ পরিণয় সূত্রে আবদ্ধ হতে যাচ্ছেন</p><span class="text-2xl">🌺</span>
+       </div>
+       <div class="bg-white bg-opacity-60 rounded-xl p-8 mb-4 decorative-border shadow-lg">
+        
+        <div class="mb-6">
+         <div class="profile-image-container">
+            <img src="Assets/A1.jpg" class="profile-image" alt="Groom Photo">
+         </div>
+         <p id="groom-name" class="text-4xl md:text-5xl font-black decorative-font mb-2" style="color: #8b0000;">এ্যানি সেন</p>
+         <p class="text-lg" style="color: #8b4513;">বর</p>
+        </div>
+        
+        <div class="flex items-center justify-center gap-4 my-6">
+         <div class="h-0.5 w-16 golden-gradient"></div><span class="text-4xl">˖᯽ ˖</span>
+         <div class="h-0.5 w-16 golden-gradient"></div>
+        </div>
+        
+        <div>
+         <div class="profile-image-container">
+            <img src="Assets/D1.jpg" class="profile-image" alt="Bride Photo">
+         </div>
+         <p id="bride-name" class="text-4xl md:text-5xl font-black decorative-font mb-2" style="color: #8b0000;">অপরাজিতা মনি</p>
+         <p class="text-lg" style="color: #8b4513;">কনে</p>
+        </div>
+
+       </div>
+      </section><section class="text-center mb-8 px-4">
+       <div class="bg-gradient-to-br from-orange-50 to-red-50 rounded-xl p-6 shadow-md">
+        <p class="text-lg md:text-xl leading-relaxed mb-4" style="color: #4a2c2c;">পরমেশ্বরের অশেষ কৃপা ও গুরুজনদের নির্মল আশীর্বাদকে পাথেয় করে <br>আমাদের জ্যেষ্ঠ পুত্র <strong id="bride-mention" style="color: #8b0000;">এ্যানি</strong>-র সাথে <strong id="groom-mention" style="color: #8b0000;">অপরাজিতা</strong>-র পবিত্র পরিণয় সুসম্পন্ন হতে যাচ্ছে।</p>
+        <p class="text-base md:text-lg" style="color: #6b4423;">এই মাঙ্গলিক লগ্নে আপনার সপরিবার উপস্থিতি ও আন্তরিক আশীর্বাদ আমাদের পরম সৌভাগ্য বলে গণ্য হবে। আপনার শুভ কামনায় নবদম্পতির আগামী দিনগুলো অনাবিল সুখে ও শান্তিতে ভরে উঠুক—এই আমাদের বিনীত প্রার্থনা।</p>
+       </div>
+      </section><section class="mb-8">
+       <div class="text-center mb-6">
+        <div class="flex items-center justify-center gap-2"><span class="text-xl" style="color: #bf953f;">✦</span> <span class="text-xl" style="color: #bf953f;">✦</span> <span class="text-xl" style="color: #bf953f;">✦</span>
+        </div>
+        <p class="text-3xl md:text-4xl font-black decorative-font mb-2" style="color: #8b0000;">📜 শুভ লগ্ন ও সময়সূচী 📜</p>
+
+       </div><div class="maroon-gradient text-white text-center py-6 rounded-xl mb-6 shadow-lg">
+        <p class="text-lg mb-2 opacity-90">শুভ দিন</p>
+        <p id="wedding-date" class="text-3xl md:text-4xl font-black">২৩ মাঘ ১৪৩২ বাংলা</p>
+        <p class="text-lg mt-2 opacity-90">৬ ফেব্রুয়ারি ২০২৬ ইং</p>
+        <p class="text-lg mt-2 opacity-90">শুক্রবার</p>
+       </div><div class="space-y-4">
+        <div class="bg-gradient-to-r from-orange-100 to-yellow-50 p-5 rounded-xl shadow-md flex items-center gap-4">
+         <div class="w-16 h-16 golden-gradient rounded-full flex items-center justify-center text-3xl shadow-lg">
+          ➤
+         </div>
+         <div class="flex-1">
+          <p class="text-2xl font-bold mb-1" style="color: #8b4513;">বর আগমন</p>
+          <p class="text-xl" style="color: #6b4423;">সন্ধ্যা ৮:০১ মিনিট</p>
+         </div>
+        </div>
+        <div class="bg-gradient-to-r from-red-100 to-orange-50 p-5 rounded-xl shadow-md flex items-center gap-4">
+         <div class="w-16 h-16 golden-gradient rounded-full flex items-center justify-center text-3xl shadow-lg">
+          ➤
+         </div>
+         <div class="flex-1">
+          <p class="text-2xl font-bold mb-1" style="color: #8b4513;">শুভ লগ্ন</p>
+          <p class="text-xl" style="color: #6b4423;">সন্ধ্যা ৮:৩০ মিনিট</p>
+         </div>
+        </div>
+        <div class="bg-gradient-to-r from-yellow-100 to-orange-50 p-5 rounded-xl shadow-md flex items-center gap-4">
+         <div class="w-16 h-16 golden-gradient rounded-full flex items-center justify-center text-3xl shadow-lg">
+          ➤
+         </div>
+         <div class="flex-1">
+          <p class="text-2xl font-bold mb-1" style="color: #8b4513;">প্রীতিভোজ</p>
+          <p class="text-xl" style="color: #6b4423;">রাত্রি ৯:০১ মিনিট</p>
+         </div>
+        </div>
+       </div>
+      </section><section class="mb-8">
+       <div class="text-center mb-4">
+        <h2 class="text-3xl md:text-4xl font-black decorative-font mb-2" style="color: #8b0000;">বিবাহ আসর</h2>
+       </div>
+       <div class="maroon-gradient text-white p-8 rounded-xl shadow-xl text-center">
+        <div class="text-5xl mb-4">
+         🪔
+        </div>
+        <p id="venue-name" class="text-2xl md:text-3xl font-bold mb-3">সামারা কনভেনশন সেন্টার</p>
+        <p id="venue-address" class="text-lg mb-6 opacity-90">কসমোপলিটন আবাসিক এর বিপরীতে, বায়েজিদ বোস্তামী রোড, চট্টগ্রাম</p><a id="map-link" href="https://maps.app.goo.gl/GxWwjprrE2H5rui88" target="_blank" rel="noopener noreferrer" class="inline-block golden-gradient text-white px-8 py-4 rounded-full text-lg font-bold shadow-lg hover:shadow-xl transition-all duration-300" style="color: #8b0000;"> 🗺️ ক্লাবের লোকেশন </a>
+       </div>
+      </section><footer class="text-center">
+       <div class="flex items-center justify-center gap-4 mb-6">
+        <div class="h-0.5 w-24 golden-gradient"></div><span class="text-3xl float-gentle">🪷</span>
+        <div class="h-0.5 w-24 golden-gradient"></div>
+       </div>
+       <p class="text-xl md:text-2xl italic mb-6" style="color: #8b4513;">আপনার শুভাগমনে অনুষ্ঠান সার্থক হবে</p><div class="bg-gradient-to-br from-orange-50 to-yellow-50 p-6 rounded-xl shadow-md mb-6">
+        <p class="text-lg font-semibold mb-2" style="color: #6b4423;">বিনীত নিবেদক —</p>
+        <p id="host-names" class="text-2xl md:text-3xl font-bold" style="color: #8b0000;">ডা: সুভাষ চন্দ্র সেন ও বাবলী শীল</p>
+       </div><div class="mb-6">
+        <div class="flex justify-center items-center gap-3 mb-4"><span class="text-3xl diya-flame">🪔</span> <span class="text-4xl">𓀎</span> <span class="text-3xl diya-flame">🪔</span>
+        </div>
+        <p class="text-3xl font-black diya-flame decorative-font" style="color: #ff6f00;">॥ শুভম্ ভবতু ॥</p>
+        <p class="text-base mt-2" style="color: #8b7355;">(মঙ্গলময় হোক)</p>
+       </div><div class="flex justify-center items-center gap-6 text-5xl"><span class="float-gentle">⚜</span> <span class="float-gentle" style="animation-delay: 0.5s;">⚜</span> <span class="float-gentle" style="animation-delay: 1s;">⚜</span>
+       </div>
+      </footer>
+     </div>
+    </div><div class="card-entrance mt-6" style="animation-delay: 0.4s;">
+     <div class="h-4 golden-gradient rounded-t-lg"></div>
+     <div class="temple-arch w-full h-16 md:h-20 transform rotate-180"></div>
+    </div>
+   </main>
+  </div>
+  <script>
+    const defaultConfig = {
+      bride_name: "অপরাজিতা মণি",
+      groom_name: "অ্যানি সেন",
+      wedding_date: "১৫ই মাঘ, ১৪৩১ বঙ্গাব্দ",
+      venue_name: "শ্রী শ্রী কালীবাড়ি মঙ্গল কমিউনিটি হল",
+      venue_address: "১২৩/এ, রাসবাড়ি রোড, যশোর সদর, যশোর",
+      map_link: "https://maps.app.goo.gl/GxWwjprrE2H5rui88",
+      host_names: "কার্তিক শীল ও রুপ্না শীল",
+      background_color: "#2d0a0a",
+      card_background: "#fef9e7",
+      primary_color: "#8b0000",
+      accent_color: "#bf953f",
+      text_color: "#4a2c2c"
+    };
+    
+    async function onConfigChange(config) {
+      const brideName = config.bride_name || defaultConfig.bride_name;
+      const groomName = config.groom_name || defaultConfig.groom_name;
+      
+      document.getElementById('bride-name').textContent = brideName;
+      document.getElementById('groom-name').textContent = groomName;
+      document.getElementById('bride-mention').textContent = brideName.split(' ')[0];
+      document.getElementById('groom-mention').textContent = groomName.split(' ')[0];
+      
+      document.getElementById('wedding-date').textContent = config.wedding_date || defaultConfig.wedding_date;
+      document.getElementById('venue-name').textContent = config.venue_name || defaultConfig.venue_name;
+      document.getElementById('venue-address').textContent = config.venue_address || defaultConfig.venue_address;
+      document.getElementById('map-link').href = config.map_link || defaultConfig.map_link;
+      document.getElementById('host-names').textContent = config.host_names || defaultConfig.host_names;
+      
+      const bgColor = config.background_color || defaultConfig.background_color;
+      const primaryColor = config.primary_color || defaultConfig.primary_color;
+      
+      document.getElementById('app-wrapper').style.background = `linear-gradient(135deg, ${bgColor} 0%, ${primaryColor} 50%, ${bgColor} 100%)`;
+    }
+    
+    function mapToCapabilities(config) {
+      return {
+        recolorables: [
+          {
+            get: () => config.background_color || defaultConfig.background_color,
+            set: (value) => {
+              config.background_color = value;
+              window.elementSdk.setConfig({ background_color: value });
+            }
+          },
+          {
+            get: () => config.card_background || defaultConfig.card_background,
+            set: (value) => {
+              config.card_background = value;
+              window.elementSdk.setConfig({ card_background: value });
+            }
+          },
+          {
+            get: () => config.primary_color || defaultConfig.primary_color,
+            set: (value) => {
+              config.primary_color = value;
+              window.elementSdk.setConfig({ primary_color: value });
+            }
+          },
+          {
+            get: () => config.accent_color || defaultConfig.accent_color,
+            set: (value) => {
+              config.accent_color = value;
+              window.elementSdk.setConfig({ accent_color: value });
+            }
+          },
+          {
+            get: () => config.text_color || defaultConfig.text_color,
+            set: (value) => {
+              config.text_color = value;
+              window.elementSdk.setConfig({ text_color: value });
+            }
+          }
+        ],
+        borderables: [],
+        fontEditable: undefined,
+        fontSizeable: undefined
+      };
+    }
+    
+    function mapToEditPanelValues(config) {
+      return new Map([
+        ["bride_name", config.bride_name || defaultConfig.bride_name],
+        ["groom_name", config.groom_name || defaultConfig.groom_name],
+        ["wedding_date", config.wedding_date || defaultConfig.wedding_date],
+        ["venue_name", config.venue_name || defaultConfig.venue_name],
+        ["venue_address", config.venue_address || defaultConfig.venue_address],
+        ["map_link", config.map_link || defaultConfig.map_link],
+        ["host_names", config.host_names || defaultConfig.host_names]
+      ]);
+    }
+    
+    if (window.elementSdk) {
+      window.elementSdk.init({
+        defaultConfig,
+        onConfigChange,
+        mapToCapabilities,
+        mapToEditPanelValues
+      });
+    }
+  </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9c0722dcf16fba5f',t:'MTc2ODgzNDE0MC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
